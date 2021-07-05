@@ -1,17 +1,27 @@
 import React from 'react'
 import { ProgressBar } from "react-bootstrap";
-import { isMobile } from "react-device-detect";
+
+const getWindowDimensions = () => 
+{
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
 
 const ResumeComp = () => {
   
   const [scrollPosition, setScrollPosition] = React.useState(0);
-  const [animateValue, setAnimateValue] = React.useState(0)
+  const [animateValue, setAnimateValue] = React.useState(0);
+  const {width} = getWindowDimensions();
 
 
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
-    isMobile ? setAnimateValue(1200) : setAnimateValue(280);
+    width <= 400 ? setAnimateValue(1100) : setAnimateValue(280);
   };
 
   React.useEffect(() => {
@@ -20,6 +30,7 @@ const ResumeComp = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+    // eslint-disable-next-line
   }, []);
 
 
