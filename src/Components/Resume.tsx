@@ -1,21 +1,14 @@
 import React from 'react'
 import { ProgressBar } from "react-bootstrap";
-
-const getWindowDimensions = () => 
-{
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
-
+import "../Assets/icons/iconsStyle.css";
+import { getWindowDimensions, getData } from "./Utils";
 
 const ResumeComp = () => {
-  
+
   const [scrollPosition, setScrollPosition] = React.useState(0);
   const [animateValue, setAnimateValue] = React.useState(0);
-  const {width} = getWindowDimensions();
+  const { width } = getWindowDimensions();
+  const { androidData, pythonData, reactData } = getData();
 
 
   const handleScroll = () => {
@@ -26,7 +19,7 @@ const ResumeComp = () => {
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -37,7 +30,7 @@ const ResumeComp = () => {
   return <div>
     <div className="pb-3">
       <h1 className="title title--h1 title__separate">Resume</h1>
-      
+
     </div>
     {/* Experience */}
     <div className="pb-0">
@@ -71,50 +64,42 @@ const ResumeComp = () => {
             {/* Item */}
             <article className="timeline__item">
               <h5 className="title title--h5 timeline__title">Android</h5>
-              <a className="social__link" href="https://github.com/shkhaider2015/MyContacts">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period">Contacts App </span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/MyNotesApp">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period">Notes App </span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/StopWatch">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period">Stop Watch App </span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/WorkArena">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period">Work Arena FYP App </span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/CanteenMS">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period"> CMS Client</span><br />
+              {
+                androidData.map(
+                  (object, index) => (
+                    <div key={index} className="d-flex flex-direction-row" >
+                      <div className="pl-2 pr-2" > <img src={object.iconURI} alt={object.alt} className="icon-playStore" /> </div> <div> {object.title} </div>
+                    </div>
+                  )
+                )
+              }
             </article>
+
             {/* Item */}
             <article className="timeline__item">
               <h5 className="title title--h5 timeline__title">Python</h5>
-              <a className="social__link" href="https://github.com/shkhaider2015/Flask_App">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period">Flask Social Web App </span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/PIAIC-QUARTER-2/blob/master/Deep%20Learning/Tensorflow/Image%20Detection%20-%20Horse%20vs%20Humans.ipynb">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period">Horse vs Human Image Recognition</span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/PIAIC-QUARTER-2/blob/master/Deep%20Learning/Tensorflow/Fashion%20Detection%20-%20Computer%20Vision.ipynb">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period">Fashion Detection IR </span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/IUSM">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period"> CMS Admin panel</span><br />
+              {
+                pythonData.map(
+                  (object, index) => (
+                    <div key={index} className="d-flex flex-direction-row" >
+                <div className="pl-2 pr-2" > <img src={object.iconURI} alt={object.alt} className="icon-playStore" /> </div> <div> {object.title} </div>
+              </div>
+                  )
+                )
+              }
             </article>
             {/* Item */}
             <article className="timeline__item">
               <h5 className="title title--h5 timeline__title">React</h5>
-              <a className="social__link" href="https://github.com/shkhaider2015/COVID19_tracker_app">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period"> COVID19 Tracker App</span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/Bootcamp_6th_class_Expense_Tracker2">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period"> Expense Tracker App </span><br />
-              <a className="social__link" href="https://github.com/shkhaider2015/Project3_ShoesStore_React">
-                <i className="font-icon icon-github" /></a>
-              <span className="timeline__period"> Shoes Store App </span><br />
+              {
+                reactData.map(
+                  (object, index) => (
+                    <div key={index} className="d-flex flex-direction-row" >
+                <div className="pl-2 pr-2" > <img src={object.iconURI} alt={object.alt} className="icon-playStore" /> </div> <div> {object.title} </div>
+              </div>
+                  )
+                )
+              }
             </article>
           </div>
         </div>
@@ -127,7 +112,7 @@ const ResumeComp = () => {
           <h2 className="title title--h3">App Development Skills</h2>
           <div className="box box__second">
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="Native Android" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Native Android" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={80} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>Android App</span><span>80%</span></div>
@@ -135,7 +120,7 @@ const ResumeComp = () => {
               <div className="progress-text"><span>Android App</span></div>
             </div> */}
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="React Native" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="React Native" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>Native App</span><span>75%</span></div>
@@ -143,7 +128,7 @@ const ResumeComp = () => {
               <div className="progress-text"><span>Native App</span></div>
             </div> */}
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="PWA" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="PWA" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>Java</span><span>90%</span></div>
@@ -151,7 +136,7 @@ const ResumeComp = () => {
               <div className="progress-text"><span>Java</span></div>
             </div> */}
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="Java / XML / Javascript" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Java / XML / Javascript" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={50} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>IOS App</span><span>50%</span></div>
@@ -164,7 +149,7 @@ const ResumeComp = () => {
           <h2 className="title title--h3">Web Development Skills</h2>
           <div className="box box__second">
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="React JS" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="React JS" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={80} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>Javascript</span><span>80%</span></div>
@@ -172,7 +157,7 @@ const ResumeComp = () => {
               <div className="progress-text"><span>Javascript</span></div>
             </div> */}
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="Flask" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Flask" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={70} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>React</span><span>70%</span></div>
@@ -180,7 +165,7 @@ const ResumeComp = () => {
               <div className="progress-text"><span>React</span></div>
             </div> */}
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="NodeJS/ExpressJS" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="NodeJS/ExpressJS" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>Firebase</span><span>100%</span></div>
@@ -188,7 +173,7 @@ const ResumeComp = () => {
               <div className="progress-text"><span>Firebase</span></div>
             </div> */}
             {/* Progress */}
-            <ProgressBar now={ scrollPosition > animateValue ? 70 : 0 } label="Firebase" />
+            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Firebase" />
             {/* <div className="progress">
               <div className="progress-bar" role="progressbar" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>
                 <div className="progress-text"><span>Flask</span><span>90%</span></div>

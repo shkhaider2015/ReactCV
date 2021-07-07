@@ -1,58 +1,64 @@
 import React from 'react'
+import {PortfoliocardComp} from "./PortfolioCard"
+import NN from "../Assets/portfolioImages/playstore.png"
 
-const PortfolioComp = () =>
-{
-    return  <div>
+const PortfolioComp = () => {
+  return <div>
     <div className="pb-2">
       <h1 className="title title--h1 title__separate">Portfolio</h1>
     </div>
     {/* Gallery */}
     <div className="pb-0">
       {/* Filter */}
-      <div className="select">
+      {/* <div className="select">
         <span className="placeholder">Select category</span>
         <ul className="filter">
           <li className="filter__item">Category</li>
           <li className="filter__item active" data-filter="*"><a className="filter__link active" href="#filter">All</a></li>
         </ul>
         <input type="hidden" name="changemetoo" />
-      </div>
+      </div> */}
       {/* Content */}
-      <div className="gallery-grid js-masonry js-filter-container">
-        <div className="gutter-sizer" />
+      {/* <div className="gallery-grid js-masonry js-filter-container row"> */}
+      <div className=" row">
+        {/* <div className="gutter-sizer" /> */}
+        <PortfoliocardComp heading="XXXXX" desc="YYY YYY YYY YY" imageURI={NN} />
+        <PortfoliocardComp heading="XXXXX" desc="YYY YYY YYY YY" imageURI={NN} />
+        <PortfoliocardComp heading="XXXXX" desc="YYY YYY YYY YY" imageURI={NN} />
+        <PortfoliocardComp heading="XXXXX" desc="YYY YYY YYY YY" imageURI={NN} />
         {/* Item 1 */}
-        <figure className="gallery-grid__item category-concept">
+        {/* <figure className="gallery-grid__item category-concept">
           <div className="gallery-grid__image-wrap">
             <img className="gallery-grid__image cover lazyload" src="../assets/img/portfolio1.PNG" data-zoom alt="" />
           </div>
           <figcaption className="gallery-grid__caption">
             <h4 className="title gallery-grid__title">Expense Tracker</h4>
-            <a href="http://expencetracker_shakeelhaider.surge.sh/" style={{textDecoration: 'none'}}><span className="gallery-grid__category">visit site</span></a>
+            <a href="http://expencetracker_shakeelhaider.surge.sh/" style={{ textDecoration: 'none' }}><span className="gallery-grid__category">visit site</span></a>
           </figcaption>
-        </figure>
+        </figure> */}
         {/* Item 2 */}
-        <figure className="gallery-grid__item category-concept">
+        {/* <figure className="gallery-grid__item category-concept">
           <div className="gallery-grid__image-wrap">
             <img className="gallery-grid__image cover lazyload" src="../assets/img/portfolio2.PNG" data-zoom alt="" />
-          </div>	
+          </div>
           <figcaption className="gallery-grid__caption">
             <h4 className="title gallery-grid__title"> COVID19 Tracker App</h4>
-            <a href="http://shkhaider_covid19_tracker_app.surge.sh/" style={{textDecoration: 'none'}}><span className="gallery-grid__category">visit site</span></a>
+            <a href="http://shkhaider_covid19_tracker_app.surge.sh/" style={{ textDecoration: 'none' }}><span className="gallery-grid__category">visit site</span></a>
           </figcaption>
-        </figure>
+        </figure> */}
         {/* Item 3 */}
-        <figure className="gallery-grid__item category-design">
+        {/* <figure className="gallery-grid__item category-design">
           <div className="gallery-grid__image-wrap">
             <img className="gallery-grid__image cover lazyload" src="../assets/img/portfolio3.PNG" data-zoom alt="" />
-          </div>	
+          </div>
           <figcaption className="gallery-grid__caption">
             <h4 className="title gallery-grid__title"> Shoes Store App</h4>
-            <a href="http://shkhaider_shoes_store.surge.sh/" style={{textDecoration: 'none'}}><span className="gallery-grid__category">visit site</span></a>
+            <a href="http://shkhaider_shoes_store.surge.sh/" style={{ textDecoration: 'none' }}><span className="gallery-grid__category">visit site</span></a>
           </figcaption>
-        </figure>
+        </figure> */}
       </div>
     </div>
   </div>
 }
 
-export {PortfolioComp};
+export { PortfolioComp };

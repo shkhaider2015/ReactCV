@@ -14,32 +14,10 @@ const AboutComp = () => {
                 {/* Case Item */}
                 <div className="col-12 col-lg-6">
                     <div className="case-item box box__second">
-                        <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-design.svg" alt="" />
-                        <div>
-                            <h3 className="title title--h5">Web Design</h3>
-                            <p className="case-item__caption">The most modern and high-quality design made at a professional level. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Case Item */}
-                <div className="col-12 col-lg-6">
-                    <div className="case-item box box__second">
                         <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-dev.svg" alt="" />
                         <div>
                             <h3 className="title title--h5">Web Development</h3>
                             <p className="case-item__caption">High-quality and professional development of sites at the professional level.</p>
-                        </div>
-                    </div>
-                </div>
-                {/* Case Item */}
-                <div className="col-12 col-lg-6">
-                    <div className="case-item box box__second">
-                        <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-app.svg" alt="" />
-                        <div>
-                            <h3 className="title title--h5">Mobile App Development</h3>
-                            <p className="case-item__caption">Professional development of applications for iOS, Android and also native app.
-                            &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -52,6 +30,31 @@ const AboutComp = () => {
                             <h3 className="title title--h5">Mobile App Development</h3>
                             <p className="case-item__caption">Professional development of applications for iOS, Android and also native app.
                             &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* Case Item */}
+                <div className="col-12 col-lg-6">
+                    <div className="case-item box box__second">
+                        <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-design.svg" alt="" />
+                        <div>
+                            <h3 className="title title--h5">UI/UX Design</h3>
+                            <p className="case-item__caption">The most modern and high-quality design made at a professional level. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                {/* Case Item */}
+                <div className="col-12 col-lg-6">
+                    <div className="case-item box box__second">
+                        <img className="case-item__icon" src="./assets/icons/iconmachine.svg" alt="" />
+                        <div>
+                            <h3 className="title title--h5">Machine Learning</h3>
+                            <p className="case-item__caption">Train, Test, and validate Machine learning model professionally
+                            &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                             </p>
                         </div>
                     </div>
