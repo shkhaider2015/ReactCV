@@ -1,14 +1,14 @@
 import React from 'react'
 import { ProgressBar } from "react-bootstrap";
 import "../Assets/icons/iconsStyle.css";
-import { getWindowDimensions, getData } from "./Utils";
+import { getWindowDimensions, getdata } from "./Utils";
 
 const ResumeComp = () => {
 
   const [scrollPosition, setScrollPosition] = React.useState(0);
   const [animateValue, setAnimateValue] = React.useState(0);
+  const {certificationsData} = getdata();
   const { width } = getWindowDimensions();
-  const { androidData, pythonData, reactData } = getData();
 
 
   const handleScroll = () => {
@@ -59,48 +59,28 @@ const ResumeComp = () => {
           </div>
         </div>
         <div className="col-12 col-lg-6">
-          <h2 className="title title--h3"><img className="title-icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-experience.svg" alt="" /> Experience</h2>
-          <div className="timeline">
+          <h2 className="title title--h3"><img className="title-icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-experience.svg" alt="" /> Certification</h2>
+          <div className="certificate-timeline" >
             {/* Item */}
-            <article className="timeline__item">
-              <h5 className="title title--h5 timeline__title">Android</h5>
-              {
-                androidData.map(
-                  (object, index) => (
-                    <div key={index} className="d-flex flex-direction-row" >
-                      <div className="pl-2 pr-2" > <img src={object.iconURI} alt={object.alt} className="icon-playStore" /> </div> <div> {object.title} </div>
-                    </div>
-                  )
-                )
-              }
-            </article>
+            {/* <article className="timeline__item">
+              <h5 className="title title--h5 timeline__title">Python for applied Data Science</h5>
+              <p className=" mb-2 ml-3" style={{ color : "#8697A8" }} >10-8-2019 —— 10-9-2019</p>
+              <p className="">Coursera</p>
+            </article> */}
 
-            {/* Item */}
-            <article className="timeline__item">
-              <h5 className="title title--h5 timeline__title">Python</h5>
-              {
-                pythonData.map(
-                  (object, index) => (
-                    <div key={index} className="d-flex flex-direction-row" >
-                <div className="pl-2 pr-2" > <img src={object.iconURI} alt={object.alt} className="icon-playStore" /> </div> <div> {object.title} </div>
-              </div>
-                  )
-                )
-              }
+            {
+              certificationsData.map(
+                (object, index) => (
+                  <article className="timeline__item">
+              <h5 className="title title--h5 timeline__title"> {object.courseTitle} </h5>
+              <p className=" mb-2 ml-3" style={{ color : "#8697A8" }} > {object.CourseDuration} </p>
+              <p className=""> {object.courseProvider} </p>
             </article>
-            {/* Item */}
-            <article className="timeline__item">
-              <h5 className="title title--h5 timeline__title">React</h5>
-              {
-                reactData.map(
-                  (object, index) => (
-                    <div key={index} className="d-flex flex-direction-row" >
-                <div className="pl-2 pr-2" > <img src={object.iconURI} alt={object.alt} className="icon-playStore" /> </div> <div> {object.title} </div>
-              </div>
-                  )
                 )
-              }
-            </article>
+              )
+            }
+           
+            
           </div>
         </div>
       </div>

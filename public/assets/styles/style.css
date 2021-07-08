@@ -2601,6 +2601,18 @@ button:focus {
   margin-top: 1.8125rem;
   padding-left: 0.5rem;
 }
+.certificate-timeline
+{
+  margin-top: 1.2125rem;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  height: 40vh;
+  overflow-y: hidden;
+}
+.certificate-timeline:hover {
+overflow-y: scroll;
+box-shadow: inset 0px -20px 8px -10px #CCC;
+}
 .timeline__item {
   border-left-color: #F0F0F6;
   border-left-width: 1px;
