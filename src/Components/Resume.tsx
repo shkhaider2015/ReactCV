@@ -14,7 +14,7 @@ const ResumeComp = () => {
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
-    width <= 400 ? setAnimateValue(1100) : setAnimateValue(280);
+    width <= 400 ? setAnimateValue(900) : setAnimateValue(150);
   };
 
   React.useEffect(() => {
@@ -91,6 +91,7 @@ const ResumeComp = () => {
         <div className="col-12 col-lg-6">
           <h2 className="title title--h3">App Development Skills</h2>
           <div className="box box__second">
+            <p> {scrollPosition} </p>
             {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Native Android" />
             {/* <div className="progress">

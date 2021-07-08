@@ -1,5 +1,5 @@
-import iconPlayStore from "../Assets/icons/playstore.svg"
-import iconWWW from "../Assets/icons/www.svg";
+// import iconPlayStore from "../Assets/icons/playstore.svg"
+// import iconWWW from "../Assets/icons/www.svg";
 // import iconGithub from "../Assets/icons/github.svg";
 
 interface projectsType {
