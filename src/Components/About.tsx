@@ -44,9 +44,6 @@ const AboutComp = () => {
                         </div>
                     </div>
                 </div>
-                
-                
-
                 {/* Case Item */}
                 <div className="col-12 col-lg-6">
                     <div className="case-item box box__second">
@@ -62,11 +59,6 @@ const AboutComp = () => {
             </div>
         </div>
     </div>
-
-
-
-
 }
 
 export { AboutComp };
-

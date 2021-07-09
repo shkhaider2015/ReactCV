@@ -8,7 +8,6 @@ const ContactComp = () =>
   const handleSubmit = (ev:any) => 
   {
     ev.preventDefault();
-
     const data = {
       from_name : ev.target.name.value,
       from_email : ev.target.email.value,

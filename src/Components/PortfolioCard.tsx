@@ -5,11 +5,13 @@ interface propTypes
 {
     heading : string,
     desc : string,
-    imageURI : string
+    imageURI : string,
+    projectLink : string
 }
 
-const PortfoliocardComp = ({ heading, desc, imageURI }:propTypes) => {
-    return <div className="col-12, col-sm-12, col-md-6, col-lg-6 mt-3 " >
+const PortfoliocardComp = ({ heading, desc, imageURI, projectLink }:propTypes) => {
+
+    return <div className="col-12, col-sm-12, col-md-6, col-lg-6 mt-3 " onClick={() => window.open(projectLink)} >
         <div className="container_foto ">
             {/* <div className="ver_mas text-center">
                 <span className="lnr lnr-eye" >Open</span>
@@ -24,5 +26,3 @@ const PortfoliocardComp = ({ heading, desc, imageURI }:propTypes) => {
 }
 
 export { PortfoliocardComp };
-
-

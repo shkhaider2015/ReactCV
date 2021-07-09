@@ -61,13 +61,7 @@ const ResumeComp = () => {
         <div className="col-12 col-lg-6">
           <h2 className="title title--h3"><img className="title-icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-experience.svg" alt="" /> Certification</h2>
           <div className="certificate-timeline" >
-            {/* Item */}
-            {/* <article className="timeline__item">
-              <h5 className="title title--h5 timeline__title">Python for applied Data Science</h5>
-              <p className=" mb-2 ml-3" style={{ color : "#8697A8" }} >10-8-2019 —— 10-9-2019</p>
-              <p className="">Coursera</p>
-            </article> */}
-
+            {/* Items */}
             {
               certificationsData.map(
                 (object, index) => (
@@ -78,9 +72,7 @@ const ResumeComp = () => {
             </article>
                 )
               )
-            }
-           
-            
+            } 
           </div>
         </div>
       </div>
@@ -91,39 +83,12 @@ const ResumeComp = () => {
         <div className="col-12 col-lg-6">
           <h2 className="title title--h3">App Development Skills</h2>
           <div className="box box__second">
-            <p> {scrollPosition} </p>
+            {/* <p> {scrollPosition} </p> */}
             {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Native Android" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={80} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>Android App</span><span>80%</span></div>
-              </div>
-              <div className="progress-text"><span>Android App</span></div>
-            </div> */}
-            {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="React Native" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>Native App</span><span>75%</span></div>
-              </div>
-              <div className="progress-text"><span>Native App</span></div>
-            </div> */}
-            {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="PWA" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>Java</span><span>90%</span></div>
-              </div>
-              <div className="progress-text"><span>Java</span></div>
-            </div> */}
-            {/* Progress */}
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Java / XML / Javascript" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={50} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>IOS App</span><span>50%</span></div>
-              </div>
-              <div className="progress-text"><span>IOS App</span></div>
-            </div> */}
+           <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Java / XML / Javascript" />
           </div>
         </div>
         <div className="col-12 col-lg-6 mt-4 mt-lg-0">
@@ -131,36 +96,9 @@ const ResumeComp = () => {
           <div className="box box__second">
             {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="React JS" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={80} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>Javascript</span><span>80%</span></div>
-              </div>
-              <div className="progress-text"><span>Javascript</span></div>
-            </div> */}
-            {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Flask" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={70} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>React</span><span>70%</span></div>
-              </div>
-              <div className="progress-text"><span>React</span></div>
-            </div> */}
-            {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="NodeJS/ExpressJS" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>Firebase</span><span>100%</span></div>
-              </div>
-              <div className="progress-text"><span>Firebase</span></div>
-            </div> */}
-            {/* Progress */}
             <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Firebase" />
-            {/* <div className="progress">
-              <div className="progress-bar" role="progressbar" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>
-                <div className="progress-text"><span>Flask</span><span>90%</span></div>
-              </div>
-              <div className="progress-text"><span>Flask</span></div>
-            </div> */}
           </div>
         </div>
       </div>

@@ -82,15 +82,6 @@ const HomeComp = () =>
                   <li className="nav__item"><span className="gg" onClick={() => navigate('/contact')}>Contact</span></li>
                 </ul>
               </div>
-
-
-              {/* About */}
-              {/* <div className="pb-0 pb-sm-2">
-              <h1 className="title title--h1 title__separate">About Me</h1>
-              <p>I'm creative Developer and UI/UX Designer from Karachi, Pakistan, working in Web Development and App Development. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
-              <p>My job is to build your Website and App so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.</p>
-            </div> */}
-              {/* What */}
                 <Routes>
                   <Route path="/" element={<AboutComp />} />
                   <Route path="/contact" element={<ContactComp />} />
@@ -114,7 +105,6 @@ const HomeComp = () =>
         <path d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z" />
       </clipPath>
     </svg>
-    {/* JavaScripts */}
   </div>
 }
 

@@ -1,14 +1,18 @@
-// import iconPlayStore from "../Assets/icons/playstore.svg"
-// import iconWWW from "../Assets/icons/www.svg";
-// import iconGithub from "../Assets/icons/github.svg";
+import { 
+  ShoesStoreImage, Covid19TrackerLargeImage, ExpanseTrackerPWALarge,
+  ExpanseTrackerlarge, QuizApp, QuizPWA, RaceAnimation, TinyAnimation, 
+  IUSMWeb
+} from "../Assets/portfolioImages/PortfolioImages";
+import { WebIcon } from "../Assets/icons/IconImages";
 
 interface projectsType {
     projectTitle : string,
+    projectDesc : string,
     imageURI : string,
     alt : string,
     projectLink : string,
     projectType : string,
-    frameWorkIconURI : string 
+    projectLinkIcon : string 
 
 }
 
@@ -75,7 +79,89 @@ export const getdata = () =>
     }
   ];
 
-  const projectsData:projectsType[] = []
+  const projectsData:projectsType[] = [
+    {
+      projectTitle : "Shoes Store",
+      projectDesc : "React/JavaScript",
+      imageURI : ShoesStoreImage,
+      alt : "Shoes Store App",
+      projectLink : "http://shkhaider_shoes_store.surge.sh/",
+      projectType : "ReactJS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "Race Animation",
+      projectDesc : "React/JavaScript",
+      imageURI : RaceAnimation,
+      alt : "Race Animation App",
+      projectLink : "http://shkhaider2015_project_race_animation.surge.sh/",
+      projectType : "ReactJS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "Tiny Animation",
+      projectDesc : "React/JavaScript",
+      imageURI : TinyAnimation,
+      alt : "Tiny Animation App",
+      projectLink : "http://shkhaider_tiny_animation.surge.sh/",
+      projectType : "ReactS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "COVID19 Tracker",
+      projectDesc : "React/JavaScript",
+      imageURI : Covid19TrackerLargeImage,
+      alt : "COVID19 Tracker App",
+      projectLink : "http://shkhaider_covid19_tracker_app.surge.sh/",
+      projectType : "ReactJS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : `Indus University Smart Mess`,
+      projectDesc : "Flask/Python",
+      imageURI : IUSMWeb,
+      alt : "Indus University Smart Mess",
+      projectLink : "https://shkhaider-iusm.herokuapp.com/",
+      projectType : "Flask",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "PWA Expense Tracker",
+      projectDesc : "React/TypeScript",
+      imageURI : ExpanseTrackerPWALarge,
+      alt : "Progressive Web App Expense Tracker",
+      projectLink : "https://shkhaider_pwa_expanse_tracker.surge.sh/",
+      projectType : "ReactJS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "PWA Quiz App",
+      projectDesc : "React/TypeScript",
+      imageURI : QuizPWA,
+      alt : "Progressive Web App Quiz App",
+      projectLink : "https://shkhaider_pwa_quiz_app.surge.sh/",
+      projectType : "ReactJS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "Expense Tracker",
+      projectDesc : "React/TypeScript",
+      imageURI : ExpanseTrackerlarge,
+      alt : "Expense Tracker App",
+      projectLink : "http://expencetracker_shakeelhaider.surge.sh/",
+      projectType : "ReactJS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "Quiz App",
+      projectDesc : "React/TypeScript",
+      imageURI : QuizApp,
+      alt : "Quiz App",
+      projectLink : "http://shkhaider2015_quiz_app.surge.sh/",
+      projectType : "ReactJS",
+      projectLinkIcon : WebIcon
+    },
+  ]
 
   return {certificationsData, projectsData };
 }
