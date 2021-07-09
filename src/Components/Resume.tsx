@@ -65,7 +65,7 @@ const ResumeComp = () => {
             {
               certificationsData.map(
                 (object, index) => (
-                  <article className="timeline__item">
+                  <article key={index} className="timeline__item">
               <h5 className="title title--h5 timeline__title"> {object.courseTitle} </h5>
               <p className=" mb-2 ml-3" style={{ color : "#8697A8" }} > {object.CourseDuration} </p>
               <p className=""> {object.courseProvider} </p>

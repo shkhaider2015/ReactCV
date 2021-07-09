@@ -32,7 +32,7 @@ $(document).ready(function() {
         opacity: 1,
         delay: 400,
         complete: function(anim) {
-            progressBar(); //Init progress bar
+            // progressBar(); //Init progress bar
         }
     });
     
@@ -92,44 +92,44 @@ $(document).ready(function() {
     var sideNavTl = anime.timeline({autoplay: false});
 
     
-    if (window.matchMedia("(max-width: 580px)").matches) {
-        $('.js-menu').each(function(i) {
-            sideNavTl
-            .add({
-                targets: '.nav',
-                duration: 1000,
-                width: ['0', '100%'],
-                opacity: [0, 1],
-                easing: 'easeInOutBack'
-            })
-            .add({
-                targets: '.nav__item',
-                duration: 200,
-                delay: anime.stagger(50),
-                opacity: [0, 1],
-                translateX: [70, 0],
-                easing: 'easeInOutBack'
-            },'-=500');
-        }); 
-    } else {
-        $('.js-menu').each(function(i) {
-            sideNavTl
-            .add({
-                targets: '.nav',
-                duration: 1000,
-                width: ['0', '100%'],
-                easing: 'easeInOutBack'
-            })
-            .add({
-                targets: '.nav__item',
-                duration: 200,
-                delay: anime.stagger(50),
-                opacity: [0, 1],
-                translateX: [70, 0],
-                easing: 'easeInOutBack'
-            },'-=500');
-        });  
-    }
+    // if (window.matchMedia("(max-width: 580px)").matches) {
+    //     $('.js-menu').each(function(i) {
+    //         sideNavTl
+    //         .add({
+    //             targets: '.nav',
+    //             duration: 1000,
+    //             width: ['0', '100%'],
+    //             opacity: [0, 1],
+    //             easing: 'easeInOutBack'
+    //         })
+    //         .add({
+    //             targets: '.nav__item',
+    //             duration: 200,
+    //             delay: anime.stagger(50),
+    //             opacity: [0, 1],
+    //             translateX: [70, 0],
+    //             easing: 'easeInOutBack'
+    //         },'-=500');
+    //     }); 
+    // } else {
+    //     $('.js-menu').each(function(i) {
+    //         sideNavTl
+    //         .add({
+    //             targets: '.nav',
+    //             duration: 1000,
+    //             width: ['0', '100%'],
+    //             easing: 'easeInOutBack'
+    //         })
+    //         .add({
+    //             targets: '.nav__item',
+    //             duration: 200,
+    //             delay: anime.stagger(50),
+    //             opacity: [0, 1],
+    //             translateX: [70, 0],
+    //             easing: 'easeInOutBack'
+    //         },'-=500');
+    //     });  
+    // }
     
     $(sideNavOpen).on('click', function(e) {
         e.preventDefault();
@@ -284,23 +284,23 @@ $(document).ready(function() {
       Progress bar
     -------------------------------------------------------------------*/
     
-	function progressBar() {
-	    $('.progress').each(function() {
-		    var ctrl = new ScrollMagic.Controller();
-		    new ScrollMagic.Scene({
-                triggerElement: '.progress',
-	            triggerHook: 'onEnter',
-	            duration: 300
-            })
-            .addTo(ctrl)
-		    .on("enter", function (e) {
-			    var progressBar = $('.progress-bar');
-                progressBar.each(function(indx){
-                    $(this).css({'width': $(this).attr('aria-valuenow') + '%', 'z-index': '2'});
-                });
-		    });
-        });
-    }
+	// function progressBar() {
+	//     $('.progress').each(function() {
+	// 	    var ctrl = new ScrollMagic.Controller();
+	// 	    new ScrollMagic.Scene({
+    //             triggerElement: '.progress',
+	//             triggerHook: 'onEnter',
+	//             duration: 300
+    //         })
+    //         .addTo(ctrl)
+	// 	    .on("enter", function (e) {
+	// 		    var progressBar = $('.progress-bar');
+    //             progressBar.each(function(indx){
+    //                 $(this).css({'width': $(this).attr('aria-valuenow') + '%', 'z-index': '2'});
+    //             });
+	// 	    });
+    //     });
+    // }
 	
 	
     /*-----------------------------------------------------------------
@@ -371,58 +371,58 @@ $(document).ready(function() {
 	  Tabs
     -------------------------------------------------------------------*/	
     
-	$('.js-tabs').each(function(){
-        console.log("Click here span")
-	    $('.content .tabcontent').hide();
-        $('.content .tabcontent:first').show();
-        $('.nav .nav__item .gg').on('click', function () {
-            $('.nav .nav__item .gg').removeClass('active');
-            $(this).addClass('active');
-            var currentTab = $(this).attr('href');
-            $('.content .tabcontent').hide();            
-            $(currentTab).show();
-            $portfolioMasonry.isotope ({
-                columnWidth: '.gallery-grid__item',
-                gutter: '.gutter-sizer',
-                isAnimated: true
-            });
-			$('.js-scroll').getNiceScroll().resize()
-            return false;
-        });
+	// $('.js-tabs').each(function(){
+    //     console.log("Click here span")
+	//     $('.content .tabcontent').hide();
+    //     $('.content .tabcontent:first').show();
+    //     $('.nav .nav__item .gg').on('click', function () {
+    //         $('.nav .nav__item .gg').removeClass('active');
+    //         $(this).addClass('active');
+    //         var currentTab = $(this).attr('href');
+    //         $('.content .tabcontent').hide();            
+    //         $(currentTab).show();
+    //         $portfolioMasonry.isotope ({
+    //             columnWidth: '.gallery-grid__item',
+    //             gutter: '.gutter-sizer',
+    //             isAnimated: true
+    //         });
+	// 		$('.js-scroll').getNiceScroll().resize()
+    //         return false;
+    //     });
 	    
-		// Mobile close menu
-	    var screenMobile = 580;
+	// 	// Mobile close menu
+	//     var screenMobile = 580;
 	
-	    windowWidth = $(window).width();
-        if ((windowWidth < screenMobile)) {	
-            $('.nav .nav__item a').on('click', function (e) {
-	            e.preventDefault();
-                $('.hamburger').removeClass('is-active');
-		        $('.inner-menu').removeClass('is-active');
-		        $('body').removeClass('open-menu');
+	//     windowWidth = $(window).width();
+    //     if ((windowWidth < screenMobile)) {	
+    //         $('.nav .nav__item a').on('click', function (e) {
+	//             e.preventDefault();
+    //             $('.hamburger').removeClass('is-active');
+	// 	        $('.inner-menu').removeClass('is-active');
+	// 	        $('body').removeClass('open-menu');
 		  
-                if (sideNavTl.began) {
-                    sideNavTl.reverse()
-			        sideNavTl.completed = false;
-                }
-                if (sideNavTl.paused) {
-                    sideNavTl.play()
-                }
-	        });
+    //             if (sideNavTl.began) {
+    //                 sideNavTl.reverse()
+	// 		        sideNavTl.completed = false;
+    //             }
+    //             if (sideNavTl.paused) {
+    //                 sideNavTl.play()
+    //             }
+	//         });
             
-			// autoscroll to content
-            $(".nav__item a").click(function(e) {
-		        e.preventDefault();
-		        var offset = -35;
+	// 		// autoscroll to content
+    //         $(".nav__item a").click(function(e) {
+	// 	        e.preventDefault();
+	// 	        var offset = -35;
 		
-                $('html, body').animate({
-                    scrollTop: $("#content").offset().top + offset
-                }, 0);
-            });			
-	    } else {
+    //             $('html, body').animate({
+    //                 scrollTop: $("#content").offset().top + offset
+    //             }, 0);
+    //         });			
+	//     } else {
 		
-	    }
-	});
+	//     }
+	// });
 	
 	
     /*-----------------------------------------------------------------

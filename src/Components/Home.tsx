@@ -1,14 +1,42 @@
 import React from 'react'
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { AboutComp } from "./About";
 import { ContactComp } from "./Contact"
 import { PortfolioComp } from "./Portfolio";
 import { ResumeComp } from "./Resume";
 
-const HomeComp = () =>
-{
-    const navigate = useNavigate();
-    return <div className="bg-triangles" >
+const HomeComp = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [selectedRoute, setSelectedRoute] = React.useState<number>();
+
+  React.useEffect(
+    () => {
+      const pn = location.pathname;
+      setSelectedRoute(pn === "/" ? 1 : pn === "/resume" ? 2 : pn === "/portfolio" ? 3 : 4);
+      // eslint-disable-next-line
+    }, []
+  )
+  const handleClick = (routeNumber: number) => {
+    setSelectedRoute(routeNumber)
+    switch (routeNumber) {
+      case 1:
+        navigate("/");
+        break;
+      case 2:
+        navigate("/resume");
+        break;
+      case 3:
+        navigate("/portfolio");
+        break;
+      case 4:
+        navigate("/contact");
+        break;
+    }
+
+  }
+
+  return <div className="bg-triangles" >
     {/* Preloader */}
     <div className="preloader">
       <div className="preloader__wrap">
@@ -43,9 +71,6 @@ const HomeComp = () =>
               </div>
               <div className="sidebar__info box-inner box-inner--rounded">
                 <ul className="contacts-block">
-                  {/* <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Birthday">
-                    <i className="font-icon icon-calendar" />March 12, 1994
-                  </li> */}
                   <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Address">
                     <i className="font-icon icon-location" />Karachi, Pakistan
                   </li>
@@ -76,18 +101,18 @@ const HomeComp = () =>
               </div>
               <div className="inner-menu inner-menu-alt">
                 <ul className="nav">
-                  <li className="nav__item"><span className="gg" onClick={() => navigate('/')}>About</span></li>
-                  <li className="nav__item"><span className="gg" onClick={() => navigate('/resume')}>Ressume</span></li>
-                  <li className="nav__item"><span className="gg" onClick={() => navigate('/portfolio')}>Portfolio</span></li>
-                  <li className="nav__item"><span className="gg" onClick={() => navigate('/contact')}>Contact</span></li>
+                  <li className="nav__item"><span className={selectedRoute === 1 ? "gg-active" : "gg"} onClick={() => handleClick(1)}>About</span></li>
+                  <li className="nav__item"><span className={selectedRoute === 2 ? "gg-active" : "gg"} onClick={() => handleClick(2)}>Resume</span></li>
+                  <li className="nav__item"><span className={selectedRoute === 3 ? "gg-active" : "gg"} onClick={() => handleClick(3)}>Portfolio</span></li>
+                  <li className="nav__item"><span className={selectedRoute === 4 ? "gg-active" : "gg"} onClick={() => handleClick(4)}>Contact</span></li>
                 </ul>
               </div>
-                <Routes>
-                  <Route path="/" element={<AboutComp />} />
-                  <Route path="/contact" element={<ContactComp />} />
-                  <Route path="/portfolio" element={<PortfolioComp />} />
-                  <Route path="/resume" element={<ResumeComp />} />
-                </Routes>
+              <Routes>
+                <Route path="/" element={<AboutComp />} />
+                <Route path="/contact" element={<ContactComp />} />
+                <Route path="/portfolio" element={<PortfolioComp />} />
+                <Route path="/resume" element={<ResumeComp />} />
+              </Routes>
 
               {/* Footer */}
               <footer className="footer">© 2020 All rights reserved</footer>
@@ -108,4 +133,4 @@ const HomeComp = () =>
   </div>
 }
 
-export {HomeComp}
+export { HomeComp }

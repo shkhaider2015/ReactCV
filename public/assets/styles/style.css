@@ -1322,6 +1322,9 @@ button:focus {
   margin-left: 0.8125rem;
   text-decoration: none;
 }
+.social__link__active {
+  
+}
 .social__link:hover {
   cursor: pointer;
   text-decoration: none;
@@ -1522,11 +1525,19 @@ button:focus {
     margin-bottom: 0.1875rem;
   }
 }
-.nav__item span {
-  color: rgba(255, 255, 255, 0.7);
+.gg {
+  color: rgba(255, 255, 255, 0.673);
 }
-.nav__item span:hover {
-  color: white;
+.gg-active {
+  color: rgb(255, 255, 255);
+  border-bottom: 3px solid white;
+}
+.gg-active:hover{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.gg:hover {
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 @media only screen and (max-width: 580px) {
@@ -1538,8 +1549,9 @@ button:focus {
   }
 }
 .nav__item a.active {
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
+
 @media only screen and (max-width: 580px) {
   .nav__item a.active {
     color: #44566C;
