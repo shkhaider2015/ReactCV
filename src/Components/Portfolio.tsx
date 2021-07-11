@@ -15,7 +15,13 @@ const PortfolioComp = () => {
       <div className=" row">
         {
           projectsData.map(
-            (object, index) => <PortfoliocardComp key={index} heading={object.projectTitle} desc={object.projectDesc} imageURI={object.imageURI} projectLink={object.projectLink} />
+            (object, index) => <PortfoliocardComp 
+                                      key={index} 
+                                      heading={object.projectTitle} 
+                                      desc={object.projectDesc} 
+                                      imageURI={object.imageURI} 
+                                      projectLink={object.projectLink}
+                                      projectLinkIcon={object.projectLinkIcon} />
           )
         }
       </div>

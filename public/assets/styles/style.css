@@ -776,6 +776,10 @@ select option,
   transition: .4s ease-in-out;
   white-space: nowrap;
 }
+.btn-contact
+{
+  margin-top: 10%;
+}
 .btn:hover {
   color: #fff;
   box-shadow: none;
@@ -2724,3 +2728,19 @@ box-shadow: inset 0px -20px 8px -10px #CCC;
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.whatsapp-anchor {
+  color: black;
+  text-decoration: none;
+}
+.whatsapp-anchor:hover {
+  color: #304CFD;
+  text-decoration: none;
+}
+
+.course-link:hover
+{
+  color: #0045ff;
+  border-bottom: 1px;
+  cursor: pointer;
+}

@@ -41,19 +41,19 @@ const ResumeComp = () => {
             {/* Item */}
             <article className="timeline__item">
               <h5 className="title title--h5 timeline__title">Indus University karachi</h5>
-              <span className="timeline__period">2015 — 2019</span>
+              <p className="mb-2 ml-3" style={{ color : "#8697A8" }} >2015 — 2019</p>
               <p className="timeline__description">BS SOFTWARE ENGINEERING</p>
             </article>
             {/* Item */}
             <article className="timeline__item">
               <h5 className="title title--h5 timeline__title">Pakistan Shipowner's Collage</h5>
-              <span className="timeline__period">2013 — 2015</span>
+              <p className="mb-2 ml-3" style={{ color : "#8697A8" }} >2013 — 2015</p>
               <p className="timeline__description">INTERMEDIATE</p>
             </article>
             {/* Item */}
             <article className="timeline__item">
               <h5 className="title title--h5 timeline__title">Al Nasir Secondary School</h5>
-              <span className="timeline__period">2005 — 2010</span>
+              <p className="mb-2 ml-3" style={{ color : "#8697A8" }} >2005 — 2010</p>
               <p className="timeline__description">METRIC</p>
             </article>
           </div>
@@ -67,8 +67,8 @@ const ResumeComp = () => {
                 (object, index) => (
                   <article key={index} className="timeline__item">
               <h5 className="title title--h5 timeline__title"> {object.courseTitle} </h5>
-              <p className=" mb-2 ml-3" style={{ color : "#8697A8" }} > {object.CourseDuration} </p>
-              <p className=""> {object.courseProvider} </p>
+              <p className="mb-2 ml-3" style={{ color : "#8697A8" }} > {object.CourseDuration} </p>
+              <p className="course-link" onClick={() => window.open(object.courseLink)} > {object.courseProvider} </p>
             </article>
                 )
               )
@@ -77,28 +77,26 @@ const ResumeComp = () => {
         </div>
       </div>
     </div>
-    {/* Skills */}
     <div className="box-inner box-inner--rounded">
       <div className="row">
         <div className="col-12 col-lg-6">
-          <h2 className="title title--h3">App Development Skills</h2>
+          <h2 className="title title--h3">Frontend Development</h2>
           <div className="box box__second">
-            {/* <p> {scrollPosition} </p> */}
-            {/* Progress */}
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Native Android" />
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="React Native" />
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="PWA" />
-           <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Java / XML / Javascript" />
+            <ProgressBar now={scrollPosition > animateValue ? 80 : 0} label="ReactJS" />
+            <ProgressBar now={scrollPosition > animateValue ? 60 : 0} label="React Native" />
+            <ProgressBar now={scrollPosition > animateValue ? 65 : 0} label="Java/XML" />
+            <ProgressBar now={scrollPosition > animateValue ? 90 : 0} label="Bootstrap/Material-UI" />
+           <ProgressBar now={scrollPosition > animateValue ? 95 : 0} label="HTML/CSS" />
           </div>
         </div>
         <div className="col-12 col-lg-6 mt-4 mt-lg-0">
-          <h2 className="title title--h3">Web Development Skills</h2>
+          <h2 className="title title--h3">Backend Development</h2>
           <div className="box box__second">
-            {/* Progress */}
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="React JS" />
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Flask" />
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="NodeJS/ExpressJS" />
-            <ProgressBar now={scrollPosition > animateValue ? 70 : 0} label="Firebase" />
+            <ProgressBar now={scrollPosition > animateValue ? 80 : 0} label="Flask" />
+            <ProgressBar now={scrollPosition > animateValue ? 60 : 0} label="Node/Express" />
+            <ProgressBar now={scrollPosition > animateValue ? 90 : 0} label="Firebase" />
+            <ProgressBar now={scrollPosition > animateValue ? 80 : 0} label="PostgresSQL" />
+            <ProgressBar now={scrollPosition > animateValue ? 75 : 0} label="Tensorflow 2.0" />
           </div>
         </div>
       </div>

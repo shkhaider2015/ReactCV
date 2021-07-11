@@ -4,6 +4,7 @@ import { AboutComp } from "./About";
 import { ContactComp } from "./Contact"
 import { PortfolioComp } from "./Portfolio";
 import { ResumeComp } from "./Resume";
+import { WhatsupBlack } from "../Assets/icons/IconImages";
 
 const HomeComp = () => {
   const navigate = useNavigate();
@@ -63,10 +64,10 @@ const HomeComp = () => {
                 <div className="badge badge--gray">Web Developer</div>
                 {/* Social */}
                 <div className="social">
-                  <a className="social__link" href="https://www.facebook.com/shakeel.haider.2015"><i className="font-icon icon-facebook" /></a>
-                  <a className="social__link" href="https://twitter.com/shkhaider2015"><i className="font-icon icon-twitter" /></a>
-                  <a className="social__link" href="https://www.linkedin.com/in/shakeel-haider-818233176/"><i className="font-icon icon-linkedin2" /></a>
-                  <a className="social__link" href="https://github.com/shkhaider2015"><i className="font-icon icon-github" /></a>
+                  <a className="social__link" target="_blank" rel="noreferrer" href="https://www.facebook.com/shakeel.haider.2015"><i className="font-icon icon-facebook" /></a>
+                  <a className="social__link" target="_blank" rel="noreferrer" href="https://twitter.com/shkhaider2015"><i className="font-icon icon-twitter" /></a>
+                  <a className="social__link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/shakeel-haider-818233176/"><i className="font-icon icon-linkedin2" /></a>
+                  <a className="social__link" target="_blank" rel="noreferrer" href="https://github.com/shkhaider2015"><i className="font-icon icon-github" /></a>
                 </div>
               </div>
               <div className="sidebar__info box-inner box-inner--rounded">
@@ -77,14 +78,16 @@ const HomeComp = () => {
                   <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
                     <a href="mailto:shkhaider2015@gmail.com"><i className="font-icon icon-envelope" />shkhaider2015@gmail.com</a>
                   </li>
-                  <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Phone">
-                    <i className="font-icon icon-phone" />+92-346-002-7852
-                  </li>
-                  <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Linked-In">
-                    <a href="https://www.linkedin.com/in/shakeel-haider-818233176/"><i className="font-icon icon-linkedin2" />/shakeel-haider</a>
-                  </li>
+                  <div className="d-flex flex-direction-row" >
+                      <div>
+                          <img style={{ width : '16px', color : 'blue' }} src={WhatsupBlack} alt="whatsapp" />
+                      </div>
+                      <div style={{ paddingLeft : '5%' }} >
+                        <a className="whatsapp-anchor" href="https://wa.me/+923460027852" target="_blank" rel="noreferrer" >+92-346-002-7852</a>
+                      </div>
+                  </div>
                 </ul>
-                <a className="btn" href="contact.html#contact-form"><i className="font-icon icon-phone" /> Contact</a>
+                <a className="btn btn-contact" href="contact.html#contact-form"><i className="font-icon icon-phone" /> Contact</a>
               </div>
             </div>
           </aside>

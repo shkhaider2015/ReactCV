@@ -13,7 +13,6 @@ interface projectsType {
     projectLink : string,
     projectType : string,
     projectLinkIcon : string 
-
 }
 
 interface certificationdataType {
