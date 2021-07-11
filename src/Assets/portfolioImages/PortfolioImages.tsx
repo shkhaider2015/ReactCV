@@ -10,11 +10,14 @@ import QuizPWA from "./quizPWA2.PNG";
 import RaceAnimation from "./race.PNG";
 import TinyAnimation from "./tinyAnimation.PNG";
 import IUSMWeb from "./iusmWeb.PNG";
+import ExpenseTrackerMobile from "./expenseTrackerMobile.png";
+import QuizAppMobile from "./quizMobile.png";
+import IUSMMobile from "./iusmMobile2.png";
 
 
 export {
     ShoesStoreImage, Covid19TrackerSmallImage, Covid19TrackerLargeImage,
     ExpanseTrackerlarge, ExpanseTrackerSmall, ExpanseTrackerPWALarge,
     ExpanseTrackerPWASmall, QuizApp, QuizPWA, RaceAnimation, 
-    TinyAnimation, IUSMWeb
+    TinyAnimation, IUSMWeb, IUSMMobile, QuizAppMobile, ExpenseTrackerMobile
 }

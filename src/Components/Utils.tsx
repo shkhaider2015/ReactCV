@@ -1,9 +1,9 @@
 import { 
   ShoesStoreImage, Covid19TrackerLargeImage, ExpanseTrackerPWALarge,
   ExpanseTrackerlarge, QuizApp, QuizPWA, RaceAnimation, TinyAnimation, 
-  IUSMWeb
+  IUSMWeb, IUSMMobile, QuizAppMobile, ExpenseTrackerMobile
 } from "../Assets/portfolioImages/PortfolioImages";
-import { WebIcon } from "../Assets/icons/IconImages";
+import { WebIcon, PlaystoreIcon } from "../Assets/icons/IconImages";
 
 interface projectsType {
     projectTitle : string,
@@ -116,7 +116,7 @@ export const getdata = () =>
       projectLinkIcon : WebIcon
     },
     {
-      projectTitle : `Indus University Smart Mess`,
+      projectTitle : `IUSM Admin`,
       projectDesc : "Flask/Python",
       imageURI : IUSMWeb,
       alt : "Indus University Smart Mess",
@@ -159,6 +159,33 @@ export const getdata = () =>
       projectLink : "http://shkhaider2015_quiz_app.surge.sh/",
       projectType : "ReactJS",
       projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "IUSM Client",
+      projectDesc : "Java/XML",
+      imageURI : IUSMMobile,
+      alt : "Indus Unicersity Smart Mess",
+      projectLink : "https://play.google.com/store/apps/details?id=my.project.canteenms",
+      projectType : "Android",
+      projectLinkIcon : PlaystoreIcon
+    },
+    {
+      projectTitle : "PWA - Expense Tracker",
+      projectDesc : "Typescript/ReactJS",
+      imageURI : ExpenseTrackerMobile,
+      alt : "PWA Expense Tracker",
+      projectLink : "https://play.google.com/store/apps/details?id=xyz.appmaker.yrkfli",
+      projectType : "ReactJS",
+      projectLinkIcon : PlaystoreIcon
+    },
+    {
+      projectTitle : "PWA - Quiz App",
+      projectDesc : "Typescript/ReactJS",
+      imageURI : QuizAppMobile,
+      alt : "PWA Quiz App",
+      projectLink : "https://play.google.com/store/apps/details?id=sh.surge.shkhaider_pwa_quiz_app.twa",
+      projectType : "ReactJS",
+      projectLinkIcon : PlaystoreIcon
     },
   ]
 
