@@ -1,5 +1,6 @@
 import React from 'react';
 import "./PortfolioCardStyle.css"
+import { PlaceHolder } from "../Assets/portfolioImages/PortfolioImages";
 
 interface propTypes 
 {
@@ -21,7 +22,7 @@ const PortfoliocardComp = ({ heading, desc, imageURI, projectLink, projectLinkIc
                 <h2> {heading} </h2>
                 <h4> {desc} </h4>
             </article>
-            <img className="bg-image" src={imageURI} alt="kjk" />
+            <img className="bg-image" src={imageURI} alt="kjk" placeholder={PlaceHolder} />
         </div>
     </div>
 }

@@ -13,11 +13,13 @@ import IUSMWeb from "./iusmWeb.PNG";
 import ExpenseTrackerMobile from "./expenseTrackerMobile.png";
 import QuizAppMobile from "./quizMobile.png";
 import IUSMMobile from "./iusmMobile2.png";
+import PlaceHolder from "./placeholder.png";
 
 
 export {
     ShoesStoreImage, Covid19TrackerSmallImage, Covid19TrackerLargeImage,
     ExpanseTrackerlarge, ExpanseTrackerSmall, ExpanseTrackerPWALarge,
     ExpanseTrackerPWASmall, QuizApp, QuizPWA, RaceAnimation, 
-    TinyAnimation, IUSMWeb, IUSMMobile, QuizAppMobile, ExpenseTrackerMobile
+    TinyAnimation, IUSMWeb, IUSMMobile, QuizAppMobile, ExpenseTrackerMobile,
+    PlaceHolder
 }
