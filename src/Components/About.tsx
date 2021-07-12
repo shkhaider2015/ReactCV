@@ -28,7 +28,7 @@ const AboutComp = () => {
                         <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-app.svg" alt="" />
                         <div>
                             <h3 className="title title--h5">Mobile App Development</h3>
-                            <p className="case-item__caption">Professional development of applications for iOS, Android and also native app.
+                            <p className="case-item__caption">Professional development of applications for iOS, Android and also native app for android.
                             &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                             </p>
                         </div>
