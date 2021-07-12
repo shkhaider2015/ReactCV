@@ -106,7 +106,7 @@ const HomeComp = () => {
               </div>
               <div className="inner-menu inner-menu-alt">
                 <ul className="nav">
-                  <li className="nav__item"><span className={selectedRoute === 1 ? "gg-active" : "gg"} onClick={() => handleClick(1)}>About</span></li>
+                  <li className="nav__item"><span className={`${ selectedRoute === 1 ? "gg-active" : "gg"}`} onClick={() => handleClick(1)}>About</span></li>
                   <li className="nav__item"><span className={selectedRoute === 2 ? "gg-active" : "gg"} onClick={() => handleClick(2)}>Resume</span></li>
                   <li className="nav__item"><span className={selectedRoute === 3 ? "gg-active" : "gg"} onClick={() => handleClick(3)}>Portfolio</span></li>
                   <li className="nav__item"><span className={selectedRoute === 4 ? "gg-active" : "gg"} onClick={() => handleClick(4)}>Contact</span></li>
