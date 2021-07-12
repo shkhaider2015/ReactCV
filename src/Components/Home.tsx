@@ -5,6 +5,7 @@ import { ContactComp } from "./Contact"
 import { PortfolioComp } from "./Portfolio";
 import { ResumeComp } from "./Resume";
 import { WhatsupBlack } from "../Assets/icons/IconImages";
+import { ProfileImage } from "../Assets/images/Images";
 
 const HomeComp = () => {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ const HomeComp = () => {
             <div className="sidebar box shadow pb-0 sticky-column">
               <svg className="avatar avatar--180" viewBox="0 0 188 188">
                 <g className="avatar__box">
-                  <image xlinkHref="../assets/img/shakeel-img-bg.png" height="100%" width="100%" />
+                  <image xlinkHref={ProfileImage} height="100%" width="100%" />
                 </g>
               </svg>
               <div className="text-center">

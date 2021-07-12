@@ -2,6 +2,7 @@ import React from 'react'
 import { ProgressBar } from "react-bootstrap";
 import "../Assets/icons/iconsStyle.css";
 import { getWindowDimensions, getdata } from "./Utils";
+import { Experience, Education } from "../Assets/icons/IconImages";
 
 const ResumeComp = () => {
 
@@ -36,7 +37,7 @@ const ResumeComp = () => {
     <div className="pb-0">
       <div className="row">
         <div className="col-12 col-lg-6">
-          <h2 className="title title--h3"><img className="title-icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-education.svg" alt="" /> Education</h2>
+          <h2 className="title title--h3"><img className="title-icon" src={Education} alt="" /> Education</h2>
           <div className="timeline">
             {/* Item */}
             <article className="timeline__item">
@@ -59,7 +60,7 @@ const ResumeComp = () => {
           </div>
         </div>
         <div className="col-12 col-lg-6">
-          <h2 className="title title--h3"><img className="title-icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-experience.svg" alt="" /> Certification</h2>
+          <h2 className="title title--h3"><img className="title-icon" src={Experience} alt="" /> Certification</h2>
           <div className="certificate-timeline" >
             {/* Items */}
             {

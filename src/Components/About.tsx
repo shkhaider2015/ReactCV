@@ -1,4 +1,5 @@
 import React from 'react'
+import { MachineLearning, AppDevelopment, WebDevelopment, UIDesign } from "../Assets/icons/IconImages";
 
 const AboutComp = () => {
     return <div>
@@ -14,7 +15,7 @@ const AboutComp = () => {
                 {/* Case Item */}
                 <div className="col-12 col-lg-6">
                     <div className="case-item box box__second">
-                        <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-dev.svg" alt="" />
+                        <img className="case-item__icon" src={WebDevelopment} alt="" />
                         <div>
                             <h3 className="title title--h5">Web Development</h3>
                             <p className="case-item__caption">High-quality and professional development of sites at the professional level.</p>
@@ -25,7 +26,7 @@ const AboutComp = () => {
                 {/* Case Item */}
                 <div className="col-12 col-lg-6">
                     <div className="case-item box box__second">
-                        <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-app.svg" alt="" />
+                        <img className="case-item__icon" src={AppDevelopment} alt="" />
                         <div>
                             <h3 className="title title--h5">Mobile App Development</h3>
                             <p className="case-item__caption">Professional development of applications for iOS, Android and also native app for android.
@@ -37,7 +38,7 @@ const AboutComp = () => {
                 {/* Case Item */}
                 <div className="col-12 col-lg-6">
                     <div className="case-item box box__second">
-                        <img className="case-item__icon" src="http://netgon.net/artstyles/v-card/assets/icons/icon-design.svg" alt="" />
+                        <img className="case-item__icon" src={UIDesign} alt="" />
                         <div>
                             <h3 className="title title--h5">UI/UX Design</h3>
                             <p className="case-item__caption">The most modern and high-quality design made at a professional level. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </p>
@@ -47,7 +48,7 @@ const AboutComp = () => {
                 {/* Case Item */}
                 <div className="col-12 col-lg-6">
                     <div className="case-item box box__second">
-                        <img className="case-item__icon" src="./assets/icons/iconmachine.svg" alt="" />
+                        <img className="case-item__icon" src={MachineLearning} alt="" />
                         <div>
                             <h3 className="title title--h5">Machine Learning</h3>
                             <p className="case-item__caption">Train, Test, and validate Machine learning model professionally
