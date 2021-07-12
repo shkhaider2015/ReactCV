@@ -932,7 +932,7 @@ button:focus {
   transition: all .3s ease-in-out;
 }
 .sidebar__user-name {
-  font-size: 1.8125rem;
+  font-size: 1.6125rem;
   font-family: "Merriweather", serif;
   margin-bottom: 0.875rem;
   position: relative;

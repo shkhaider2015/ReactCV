@@ -61,7 +61,7 @@ const HomeComp = () => {
               </svg>
               <div className="text-center">
                 <h3 className="title title--h3 sidebar__user-name">Shakeel Haider</h3>
-                <div className="badge badge--gray">Web Developer</div>
+                <div className="badge badge--gray">Software Developer</div>
                 {/* Social */}
                 <div className="social">
                   <a className="social__link" target="_blank" rel="noreferrer" href="https://www.facebook.com/shakeel.haider.2015"><i className="font-icon icon-facebook" /></a>
@@ -78,16 +78,17 @@ const HomeComp = () => {
                   <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
                     <a href="mailto:shkhaider2015@gmail.com"><i className="font-icon icon-envelope" />shkhaider2015@gmail.com</a>
                   </li>
-                  <div className="d-flex flex-direction-row" >
+                  <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
+                    
+                  <div className="d-flex flex-direction-row w-100 justify-content-sm-center justify-content-md-start justify-content-lg-start" >
                       <div>
-                          <img style={{ width : '16px', color : 'blue' }} src={WhatsupBlack} alt="whatsapp" />
-                      </div>
-                      <div style={{ paddingLeft : '5%' }} >
-                        <a className="whatsapp-anchor" href="https://wa.me/+923460027852" target="_blank" rel="noreferrer" >+92-346-002-7852</a>
+                          <img style={{ width : '8%', color : 'blue' }} src={WhatsupBlack} alt="whatsapp" />
+                        <a className="whatsapp-anchor ml-2" href="https://wa.me/+923460027852" target="_blank" rel="noreferrer" >+92-346-002-7852</a>
                       </div>
                   </div>
+                  </li>
                 </ul>
-                <a className="btn btn-contact" href="contact.html#contact-form"><i className="font-icon icon-phone" /> Contact</a>
+                <span className="btn btn-contact" onClick={() => handleClick(4)} ><i className="font-icon icon-phone" /> Contact</span>
               </div>
             </div>
           </aside>
@@ -137,4 +138,3 @@ const HomeComp = () => {
 }
 
 export { HomeComp }
-
