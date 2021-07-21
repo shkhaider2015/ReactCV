@@ -2657,7 +2657,6 @@ button:focus {
 
 .certificate-timeline:hover {
 overflow-y: scroll;
-box-shadow: inset 0px -20px 8px -10px rgba(0, 13, 255, 0.279);
 }
 
 @media only screen and (max-width: 580px) {
@@ -2789,7 +2788,7 @@ box-shadow: inset 0px -20px 8px -10px rgba(0, 13, 255, 0.279);
 }
 
 .certificate-timeline::-webkit-scrollbar {
-  width: .6em;
+  width: .3em;
 }
  
 .certificate-timeline::-webkit-scrollbar-track {

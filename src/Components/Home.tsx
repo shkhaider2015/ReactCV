@@ -103,6 +103,7 @@ const HomeComp = () => {
                   <div className="line" />
                   <div className="line" />
                 </div>
+                
               </div>
               <div className="inner-menu inner-menu-alt">
                 <ul className="nav">

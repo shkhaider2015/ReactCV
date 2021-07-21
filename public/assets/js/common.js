@@ -72,11 +72,13 @@ $(document).ready(function() {
     };
 
 
+
     /*-----------------------------------------------------------------
       Hamburger
     -------------------------------------------------------------------*/
 
     $('.hamburger').on('click', function() {
+        console.log("ham")
         $(this).toggleClass('is-active');
 	    $('.inner-menu').toggleClass('is-active');
 		$('body').toggleClass('open-menu');
@@ -142,9 +144,11 @@ $(document).ready(function() {
         }
     });
 
-    $(".gg").on('click', function(e) {
+    $(".gg, .gg-active").on('click', function(e) {
         e.preventDefault();
-        $('body').toggleClass('open-menu');
+        $('.hamburger').toggleClass('is-active');
+	    $('.inner-menu').toggleClass('is-active');
+		$('body').toggleClass('open-menu');
     });
 
     
