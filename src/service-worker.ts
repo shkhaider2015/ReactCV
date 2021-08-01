@@ -80,17 +80,6 @@ self.addEventListener('message', (event) => {
 // self.__WB_MANIFEST;
 // Any other custom service worker logic can go here.
 const cacheName:string = "my-cv";
-const contentToCache:string[] = [
-    "/public/index.html",
-    "/public/manifest.json",
-    "/public/logo192.png",
-    "/public/logo512.png",
-    "/public/assets/img/Shakeel-img-bg2.png",
-    "/public/assets/img/shk.jpg",
-    "/src/Assets/icons/IconImages.tsx",
-    "/src/Assets/images/Images.tsx",
-    "/src/Assets/portfolioImages/PortfolioImages.tsx"
-]
 const urlToCached:string[] = [
     "/",
     "/resume",
