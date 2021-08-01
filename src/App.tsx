@@ -1,12 +1,12 @@
 import React from 'react';
-import { HashRouter} from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 import { HomeComp } from "./Components/Home";
 
 function App() {
 
-  return <HashRouter >
+  return <BrowserRouter >
         <HomeComp />
-  </HashRouter>
+  </BrowserRouter>
 }
 
 export default App;
