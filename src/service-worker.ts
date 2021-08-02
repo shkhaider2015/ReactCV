@@ -82,7 +82,6 @@ self.addEventListener('message', (event) => {
 const cacheName:string = "my-cv";
 const urlToCached:string[] = [
     "/",
-    "/*"
 ]
 
 self.addEventListener('install', (e) => {
