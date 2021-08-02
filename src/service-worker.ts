@@ -82,16 +82,7 @@ self.addEventListener('message', (event) => {
 const cacheName:string = "my-cv";
 const urlToCached:string[] = [
     "/",
-    '/src/index.tsx',
-    '/src/App.tsx',
-    '/src/Components/Home.tsx',
-    '/src/Components/About.tsx',
-    '/src/Components/Contact.tsx',
-    '/src/Components/Portfolio.tsx',
-    '/src/Components/Resume.tsx'
-    // "/resume",
-    // "/portfolio",
-    // "/contact"
+    "/*"
 ]
 
 self.addEventListener('install', (e) => {
