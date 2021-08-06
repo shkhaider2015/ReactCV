@@ -14,6 +14,7 @@ import ExpenseTrackerMobile from "./expenseTrackerMobile.png";
 import QuizAppMobile from "./quizMobile.png";
 import IUSMMobile from "./iusmMobile2.png";
 import PlaceHolder from "./placeholder.png";
+import SpaceX from "./spacex.PNG";
 
 
 export {
@@ -21,5 +22,5 @@ export {
     ExpanseTrackerlarge, ExpanseTrackerSmall, ExpanseTrackerPWALarge,
     ExpanseTrackerPWASmall, QuizApp, QuizPWA, RaceAnimation, 
     TinyAnimation, IUSMWeb, IUSMMobile, QuizAppMobile, ExpenseTrackerMobile,
-    PlaceHolder
+    PlaceHolder, SpaceX
 }

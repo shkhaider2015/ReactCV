@@ -1,7 +1,7 @@
 import { 
   ShoesStoreImage, Covid19TrackerLargeImage, ExpanseTrackerPWALarge,
   ExpanseTrackerlarge, QuizApp, QuizPWA, RaceAnimation, TinyAnimation, 
-  IUSMWeb, IUSMMobile, QuizAppMobile, ExpenseTrackerMobile
+  IUSMWeb, IUSMMobile, QuizAppMobile, ExpenseTrackerMobile, SpaceX
 } from "../Assets/portfolioImages/PortfolioImages";
 import { WebIcon, PlaystoreIcon } from "../Assets/icons/IconImages";
 
@@ -104,6 +104,15 @@ export const getdata = () =>
       alt : "Tiny Animation App",
       projectLink : "http://shkhaider_tiny_animation.surge.sh/",
       projectType : "ReactS",
+      projectLinkIcon : WebIcon
+    },
+    {
+      projectTitle : "SpaceX",
+      projectDesc : "React/Typescript",
+      imageURI : SpaceX,
+      alt : "Spacex withy graphQL",
+      projectLink : "https://shkhaider-spacex.surge.sh/",
+      projectType : "ReactJS",
       projectLinkIcon : WebIcon
     },
     {
