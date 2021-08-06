@@ -86,6 +86,7 @@ const ResumeComp = () => {
             <ProgressBar now={scrollPosition > animateValue ? 80 : 0} label="ReactJS" />
             <ProgressBar now={scrollPosition > animateValue ? 60 : 0} label="React Native" />
             <ProgressBar now={scrollPosition > animateValue ? 65 : 0} label="Java/XML" />
+            <ProgressBar now={scrollPosition > animateValue ? 90 : 0} label="Redux" />
             <ProgressBar now={scrollPosition > animateValue ? 90 : 0} label="Bootstrap/Material-UI" />
            <ProgressBar now={scrollPosition > animateValue ? 95 : 0} label="HTML/CSS" />
           </div>
