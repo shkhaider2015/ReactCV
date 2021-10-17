@@ -1,37 +1,4 @@
-/* ------------------------------------------------
- Author: ArtStyles (Art)
- 
- Template Name: vCard
- version: 1.1.0
------------------------------------------------- */
-/* ------------------------------------------------
 
-
- - General Styles
- - Background
- - Typography
- - Preloader
- - Form
- - Button
- - Preloader
- - Sidebar
- - Sections
- - Navbar
- - Footer
- - Cases
- - Clients
- - Contact
- - Single post
- - Footer
- - Contact
- - Portfolio
- - News
- - Single news
- - Testimonials
- - Timeline
- - Other
- 
------------------------------------------------- */
 @import url(vendors/bootstrap.min.css);
 @import url(vendors/swiper.min.css);
 @import url(vendors/simplebar.min.css);

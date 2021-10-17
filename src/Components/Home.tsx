@@ -79,7 +79,7 @@ const HomeComp = () => {
                   <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
                     <a href="mailto:shkhaider2015@gmail.com"><i className="font-icon icon-envelope" />shkhaider2015@gmail.com</a>
                   </li>
-                  <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
+                  <li className="contacts-block__item" data-toggle="tooltip" data-placement="top" title="WhatsUp">
                     
                   <div className="d-flex flex-direction-row w-100 justify-content-sm-center justify-content-md-start justify-content-lg-start" >
                       <div>
